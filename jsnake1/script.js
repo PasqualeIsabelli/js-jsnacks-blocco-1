@@ -2,18 +2,19 @@
 const firstnameList = ["Antonio", "Giuseppe", "Giovanni", "Ciro", "Salvatore"];
 const lastnameList = ["Rossi", "Verdi", "Bianchi", "Draghi", "Esposito"];
 
+const guestList = [];
+
 // Ciclo
 for (let i = 0; i < 25; i++){
 
   // Randomizzo i nomi e cognomi
-  const randomFirstname = Math.floor(Math.random() * 5);
-  const randomLastname = Math.floor(Math.random() * 5);
-
-  const firstName = firstnameList[randomFirstname];
-  const lastName = lastnameList[randomLastname];
+  const randomFirstname = Math.floor(Math.random() * lastnameList.length); 
+  const randomLastname = Math.floor(Math.random() * firstnameList.length);
 
   // Sommo nome e cognome
-  const fullName = `${firstName} ${lastName}`;
+  const fullName = [firstnameList[randomFirstname], lastnameList[randomLastname]];
 
-  console.log (fullName);
+  guestList.push(fullName.join(" "));
 }
+
+console.log (guestList);
