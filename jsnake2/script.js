@@ -8,7 +8,7 @@ for (i = 0; i < 25; i++) {
   const num = Math.floor(Math.random() * 50) +1;
   
   // Prendo i numeri nella posizione dispari
-  if (i % 2 != 0){
+  if (i % 2 !== 0){
     // Sommo i numeri con indice dispari tra loro
     sum += num;
   }
